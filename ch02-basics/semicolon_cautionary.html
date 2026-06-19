@@ -1,0 +1,13 @@
+<script>
+    //文末のセミコロンはつけたほうがいいよ
+    function fn1(){
+        return 1
+    }
+    function fn2(){
+        return //return;と認識される
+        1 //1が戻り値として設定されてない
+    }
+
+    fn1()
+    fn2()
+</script>
