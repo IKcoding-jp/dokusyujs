@@ -1,0 +1,14 @@
+<script>
+    //Bigint型とNumber型は混在して使用できない
+    let num = 2;
+    let bi = 3n;
+
+    //console.log( num * bi ); //エラーが発生する
+
+
+    //BigIntは少数点以下は切り捨てられる。
+    let three = 3n;
+    let five = 5n;
+
+    console.log( five / three ); //1.6666...小数点以下は切り捨てられるので1nと表示される。
+</script>

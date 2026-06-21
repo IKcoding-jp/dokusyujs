@@ -1,0 +1,42 @@
+<script>
+    //浮動小数点の記述例
+    console.log( 1234 + 0.5 );
+    console.log( 1234 + .5 ); //先頭の０は省略することもできる。
+
+    console.log( 3e4 ); //eに続けて数値を記入した場合
+    console.log( 0b11 ); //2進数の記述例
+    console.log( 0o11 ); //8進数の記述例
+    console.log( 0x11 ); //16進数の記述例
+
+    //javascriptでは整数値(Integer)と浮動小数点数(Float)はどちらもNumber型として扱われる。プログラミング言語によって違う。
+    let integerNumber = 100;
+    let floatNumber = 100.0;
+
+    console.log( integerNumber + floatNumber );
+
+    //練習問題3.4
+    let num1 = 5 + 6 - 1;
+    console.log( num1 );
+    
+    let num2 = num1 * 2;
+    console.log( num2 );
+
+    let num3 = num2 % 3;
+    console.log( num3 );
+
+    let num4 = num3 ** 3;
+    console.log( num4 );
+
+    //正解
+    let sum = 5 + 6 - 1;
+    console.log( sum );
+
+    sum = sum * 2;
+    console.log( sum );
+
+    sum = sum % 3;
+    console.log( sum );
+
+    sum = sum ** 3;
+    console.log( sum );
+</script>
