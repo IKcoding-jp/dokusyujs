@@ -1,0 +1,29 @@
+<script>
+    //インクリメント演算子とデクリメント演算し
+    let x = 0;
+    ++x;
+    console.log( x ); //1
+
+    --x;
+    console.log( x ); //0
+
+    //前置インクリメント
+    let a = 0;
+    let b = ++a;
+    console.log( "a:", a, "b:", b ); //a:1 b:1
+
+    //後置インクリメント
+    let c = 0;
+    let d = c++;
+    console.log( "c:", c, "d:", d );
+
+    //前置デクリメント
+    let e = 0;
+    let f = --e;
+    console.log( "e", e, "f:", f );
+
+    //後置デクリメント
+    let g = 0;
+    let h = g--;
+    console.log( "g:", g, "h:", h );
+</script>
