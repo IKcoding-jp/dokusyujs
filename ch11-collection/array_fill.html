@@ -1,0 +1,17 @@
+<script>
+    //fillを使わない場合
+    const arry1 = [];
+    for(let i = 0; i < 100; i++) {
+        arry1.push( 0 ); //pushで一つずつ末尾に０を追加
+    }
+    console.log(arry1);
+
+    //fillを使った場合の例
+    const arry2 = new Array( 100 ); //長さが100の空の配列を作成
+    arry2.fill( 0 );
+
+    console.log(arry2);
+
+    //上の２行は次のように書くと、より記述を簡略化できる
+    // (new Array( 100)).fill(0);
+</script>

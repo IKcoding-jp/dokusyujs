@@ -1,0 +1,18 @@
+<script>
+  //forEachで記述した場合
+  const arry = [1, 2, 3, 4, 5];
+  arry.forEach(function (value, index, arry) {
+    console.log(value, index, arry);
+  });
+
+  //for分で記述した場合
+  const arry2 = [1, 2, 3, 4, 5];
+  for (let index = 0; index < arry2.length; index++) {
+    let value = arry2[index];
+    console.log(value, index, arry2);
+  }
+
+  //アロー関数を使った場合
+  const arry3 = [1, 2, 3, 4, 5];
+  arry3.forEach((value, index, arry3) => console.log(value, index, arry3));
+</script>
