@@ -1,0 +1,37 @@
+<script>
+  //オブジェクトの順番は関係ない
+  let { banana, orange, apple } = {
+    apple: "リンゴ",
+    banana: "バナナ",
+    orange: "オレンジ",
+  };
+  console.log(banana);
+
+  //プロパティと変数名を変えたい場合
+  let { banana: b, apple: a } = { apple: "リンゴ", banana: "バナナ" };
+  console.log(b, a);
+
+  let { banana: b2 = "おいしいバナナ" } = { apple: "リンゴ" };
+  console.log(b2);
+
+  let { banana: b3, ...fruits } = {
+    //スプレッド演算子を合わせて使うこともできる
+    apple: "リンゴ",
+    banana: "バナナ",
+    orange: "オレンジ",
+  };
+  console.log(fruits);
+
+  let {
+    fruits: { apple: a3 },
+  } = { fruits: { apple: "リンゴ", banana: "バナナ" } };
+  console.log(a3);
+
+  let prop = "apple";
+  let { [prop]: a4 } = {
+    apple: "リンゴ",
+    banana: "バナナ",
+    orange: "オレンジ",
+  };
+  console.log(a4);
+</script>

@@ -1,0 +1,15 @@
+<script>
+  const todos = [
+    { title: "晩御飯", priority: 2, completed: false },
+    { title: "ゴミ出し", priority: 1, completed: true },
+    { title: "食材の買い出し", priority: 3, completed: false },
+    { title: "食卓", priority: 2, completed: true },
+    { title: "録画の視聴", priority: 1, completed: false },
+  ];
+
+  todos.forEach(({ title, completed }) => {
+    if (completed) {
+      console.log(`${title}は完了!`);
+    } else console.log(`${title}をやらないと!`);
+  });
+</script>
