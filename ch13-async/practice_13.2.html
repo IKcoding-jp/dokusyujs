@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function delay(fn, message, ms) {
+        setTimeout(function () {
+          fn(message);
+        }, ms);
+      }
+
+      delay(console.log, "こんにちは", 1000);
+      delay(window.alert, "さようなら", 2000);
+      delay(
+        function (val) {
+          console.log(val);
+          delay(console.log, "さらに1秒経ちました。", 2000);
+        },
+        "1秒経ちました。",
+        1000,
+      );
+    </script>
+  </body>
+</html>

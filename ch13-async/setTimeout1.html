@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>ボタン</button>
+    <script>
+      function sleep(ms) {
+        setTimeout(function () {
+          alert("sleep関数が完了しました");
+        }, ms);
+      }
+
+      sleep(3000); //sleep関数を実行
+
+      //ボタンにクリック時の処理を実装
+      const btn = document.querySelector("button");
+      function clickHandler() {
+        alert("ボタンがクリックされました");
+      }
+      btn.addEventListener("click", clickHandler);
+    </script>
+  </body>
+</html>

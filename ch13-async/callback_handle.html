@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let val = 1;
+
+      function timer(callback) {
+        setTimeout(function task() {
+          val = Math.floor(Math.random() * 11);
+          callback(val);
+        }, 1000);
+      }
+
+      function operations(val) {
+        console.log(val);
+      }
+
+      timer(operations);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let instance = new Promise((resolve, reject) => {
+        //1秒後に実行
+        setTimeout(() => {
+          //0から10のランダムな値を取得
+          const rand = Math.floor(Math.random() * 11);
+
+          if (rand < 5) {
+            reject(rand);
+          } else {
+            resolve(rand);
+          }
+        }, 1000);
+      });
+
+      instance = instance.then((value) => {
+        console.log(`5以上の値[${value}]が返ってきました。`);
+      });
+
+      instance = instance.catch((errorvalue) => {
+        console.error(`5未満の値[${errorvalue}]が渡ってきたためエラー表示。`);
+      });
+
+      instance = instance.finally(() => {
+        console.log("処理を終了します。");
+      });
+    </script>
+  </body>
+</html>
