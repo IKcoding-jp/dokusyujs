@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>2秒後に文字と背景の色が変わります。</div>
+
+    <style>
+      /* 付与する予定をスタイルをCSSであらかじめ定義 */
+      .preperedClass {
+        color: red;
+        background-color: blue;
+      }
+    </style>
+
+    <script>
+      setTimeout( () => {
+        const div = document.querySelector( "div" );
+        div.classList.add( "preparedClass");
+      },2000);
+    </script>
+  </body>
+</html>

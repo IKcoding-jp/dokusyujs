@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 新しい要素をここに取得したい -->
+    <template id="tmpl">
+      <!-- テンプレート内の記述は画面上に表示されない -->
+      <span>テンプレートHTMLを定義</span>
+    </template>
+    <script>
+      const tmpl = document.querySelector("#tmpl");
+      const targetNewElement = tmpl.content;
+      document.body.prepend(targetNewElement);
+    </script>
+  </body>
+</html>

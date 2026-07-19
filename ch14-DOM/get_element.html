@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section id="container">
+      <span class="target-cls"></span>
+      <div class="class">
+        <input name="child1" />
+        <input name="child2" />
+      </div>
+      <p class="target-cls"></p>
+    </section>
+    <script>
+      const elById = document.getElementById("container");
+
+      const elsByCls = document.getElementByClassName("target-cls");
+
+      const elsByName = document.getElementsByName("child1");
+
+      const elsByTag = document.getElementsByTagName("p");
+    </script>
+  </body>
+</html>
