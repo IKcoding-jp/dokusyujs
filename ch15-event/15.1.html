@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="" id="target"></div>
+
+    <script>
+      const cursor = document.querySelector("#target");
+
+      cursor.onmouseenter = function () {
+        cursor.style.background = "red";
+      };
+
+      cursor.onmouseleave = function () {
+        cursor.style.background = "none";
+      };
+    </script>
+
+    <style>
+      /* 画面の見栄えを調整 */
+
+      div {
+        position: absolute;
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+      }
+      body {
+        background-color: cornsilk;
+      }
+    </style>
+  </body>
+</html>

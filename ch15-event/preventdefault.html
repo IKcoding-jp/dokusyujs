@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a href="https://google.com/">Googleへは行かせません。</a>
+    <a href="https://yahoo.co.jp/">Yahooへはいかせません。</a>
+
+    <script>
+      // すべてのアンカータグ(a)を取得
+      const links = document.querySelectorAll("a");
+
+      // すべてのアンカータグに対してリンク無効化のアクションを追加
+      links.forEach((link) =>
+        link.addEventListener("click", (event) => {
+          event.preventDefault();
+          alert(event.currentTarget.textContent); //アラートの表示
+        }),
+      );
+    </script>
+  </body>
+</html>

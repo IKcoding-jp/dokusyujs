@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>色は変わりません</div>
+    <button id="color">文字色の変更</button>
+
+    <script>
+      const targetEl = document.querySelector("div");
+      const colorBtn = document.querySelector("#color");
+
+      function colorChange(event) {
+        targetEl.style.color = "#ff0000";
+      }
+
+      colorBtn.addEventListener("click", colorChange);
+      colorBtn.removeEventListener("click", colorChange);
+    </script>
+  </body>
+</html>
