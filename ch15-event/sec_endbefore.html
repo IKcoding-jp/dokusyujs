@@ -14,13 +14,12 @@
       const val2 = document.querySelector("#val2");
       const answer = document.querySelector("#answer");
 
-      val1.addEventListener("input", (event) => {
+      const updateAnswer = () => {
         answer.textContent = Number(val1.value) + Number(val2.value);
-      });
+      };
 
-      val2.addEventListener("input", (event) => {
-        answer.textContent = Number(val1.value) + Number(val2.value);
-      });
+      val1.addEventListener("input", updateAnswer);
+      val2.addEventListener("input", updateAnswer);
     </script>
 
     <style>
