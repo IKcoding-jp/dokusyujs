@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Promiseオブジェクトでラップされたモジュールオブジェクトが渡される
+      let promise = import("./module.js");
+      promise.then((moduleObject) => {
+        moduleObject.exportedFn();
+      });
+
+      // await / asyncを使うことも可能
+      async function asyncFunction() {
+        let { exportedFn } = await import("./module.js");
+        exportedFn();
+      }
+
+      asyncFunction();
+    </script>
+  </body>
+</html>
